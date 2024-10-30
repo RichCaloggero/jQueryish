@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>jQueryish</title>
+<link rel="shortcut icon" href="#" type="image/x-icon">
+<style>
+nav ul {list-style-type: none;}
+</style>
+</head>
+<body>
+<main>
+<form>
+<div><label>initial value: <input type="number" data-name="reset" value="0"></label></div>
+<div>count: <output data-name="count"></output></div>
+<div><span data-name="value"></span></div>
+
+
+</form>
+</main>
+<output id="message"></output>
+
+<script src="$.js"></script>
+<script>
+$("reset").set(77);
+$("count").set(22);
+$("value").set([91,86]);
+$("output").index(1).attr({value: 5, "data-foo": "bar"});
+$("output").index(1).text($("output").get(1).outerHTML);
+
+</script>
+
+
+</body>
+</html>
